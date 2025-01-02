@@ -5,4 +5,4 @@ TUGAS AKHIR BASIS DATA (G)
 ```sql
 CREATE DATABASE db_Bidang1Imatika
 ```
-![Create-Database](/.png)
+![Create-Database](1.png)
