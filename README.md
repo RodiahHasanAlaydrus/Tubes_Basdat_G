@@ -79,3 +79,42 @@ INSERT INTO Anggota (ID_Anggota, NPM, Nama, Tanggal_Lahir, Email, Nomer_Telepon)
 ![Insert-Table-Anggota](/Gambar/5.png)
 ![Show-Insert-Table-Anggota](/Gambar/6.png)
 ![Show-Insert-Table-Anggota](/Gambar/7.png)
+
+### Step 4: Membuat Table divisi (`divisi`)
+```sql
+CREATE TABLE divisi (
+    ID_Divisi INT PRIMARY KEY AUTO_INCREMENT,
+    Nama_Divisi Varchar(225),
+    Ketua_Divisi Varchar(225)
+);
+```
+![Create-Table-divisi](/Gambar/8.png)
+![Show-Table-divisi](/Gambar/9.png)
+
+### Step 5: Memasukan data ke dalam Table divisi 
+```sql
+INSERT INTO divisi (ID_Divisi, nama_divisi, ketua_divisi) VALUES 
+('','Pendidikan','Gino Putra Widana'),
+('','Penelitian','Rizky Nuril Ikhsan'),
+('','Kaderisasi','Emyely Nemy Agustine'),
+('','Pengembangan','Siti Nurhaliza Fahmi'),
+('','Kerjasama Akademik','Haryo Bintang Alfareza'),
+('','Inovasi Teknologi','Daffa Muhammad Pratama'),
+('','Publikasi Ilmiah','Rizka Adelia Wijaya'),
+('','Bimbingan Belajar','Aulia Rahayu Kartika'),
+('','Pengelolaan Perpustakaan','Adi Nugroho Saputra'),
+('','Pengembangan Kurikulum','Farah Indira Putri'),
+('','Sumber Daya Akademik','Naufal Yudha Setiawan'),
+('','Program Studi Luar Kampus','Nadya Maulida Ayu'),
+('','Pelatihan Keterampilan','Bayu Alif Ramadhan'),
+('','Evaluasi Akademik','Andini Cahya Permata'),
+('','Pusat Informasi Mahasiswa','Bimo Arya Saputra'),
+('','Manajemen Penelitian','Zahra Anindita Ramadhani'),
+('','Pengabdian Masyarakat','Fikri Ahmad Ramzi'),
+('','Pembinaan Prestasi','Putri Maharani Dewi'),
+('','Organisasi Kemahasiswaan','Rendi Maulana Setyo'),
+('','Pengelolaan Laboratorium','Sabrina Hanifa Lestari');
+```
+![Insert-Table-divisi](/Gambar/10.png)
+![Show-Insert-Table-divisi](/Gambar/11.png)
+
