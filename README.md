@@ -5,7 +5,7 @@ TUGAS AKHIR BASIS DATA (G)
 ```sql
 CREATE DATABASE db_Bidang1Imatika
 ```
-![Create-Database](1.png)
+![Create-Database](/Gambar/1.png)
 
 ### Step 1: Membuat table Anggota (`Anggota`)
 ```sql
@@ -18,5 +18,5 @@ CREATE TABLE Anggota(
 	Nomer_Telepon BIGINT
 );
 ```
-![Create-Table-Anggota](2.png)
-![Show-Table-Anggota](3.png)
+![Create-Table-Anggota](/Gambar/2.png)
+![Show-Table-Anggota](/Gambar/3.png)
