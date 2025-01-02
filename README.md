@@ -321,7 +321,7 @@ CREATE TABLE Surat_Keputusan_Kepanitiaan (
 ![Create-Table-Surat_Keputusan_Kepanitiaan](/Gambar/31.png)
 ![Show-Table-Surat_Keputusan_Kepanitiaan](/Gambar/32.png)
 
-### Step 13: Memasukan data ke dalam Table Surat_Keputusan_Kepanitiaan
+### Step 15: Memasukan data ke dalam Table Surat_Keputusan_Kepanitiaan
 ```sql
 INSERT INTO Surat_Keputusan_Kepanitiaan (ID_Ketua_Pelaksana, ID_Anggota, Tanggal_Terbit_SK, Lokasi_SK)
 VALUES
@@ -348,3 +348,69 @@ VALUES
 ```
 ![Insert-Table-Surat_Keputusan_Kepanitiaan](/Gambar/33.png)
 ![Show-Table-Surat_Keputusan_Kepanitiaan](/Gambar/34.png)
+
+### Step 16: Implementasikan konsep transaction
+
+Sebelum implementasi konsep transaksi:
+(table pendanaan)
+![ID_Pendanaan-1-Jumlah_Dana-15000000](/Gambar/35.png)
+(table program_kerja)
+![ID_Program_Kerja-1-Dana_Pemasukan-0](/Gambar/36.png)
+
+```sql
+START TRANSACTION;
+
+UPDATE Pendanaan
+SET Jumlah_Dana = Jumlah_Dana - 5000000
+WHERE ID_Pendanaan = 1 AND Jumlah_Dana >= 5000000;
+
+UPDATE Program_Kerja
+SET Dana_Pemasukan = Dana_Pemasukan + 5000000
+WHERE ID_Program_Kerja = 1
+  AND EXISTS (
+      SELECT 1
+      FROM Pendanaan
+      WHERE ID_Pendanaan = 1 AND Jumlah_Dana >= 5000000
+  );
+
+COMMIT;
+```
+![Konsep-Transaksi-Sukses](/Gambar/37.png)
+
+Setelah implementasi konsep transaksi:
+(table pendanaan)
+![ID_Pendanaan-1-Jumlah_Dana-10000000](/Gambar/39.png)
+(table program_kerja)
+![ID_Program_Kerja-1-Dana_Pemasukan-5000000](/Gambar/39.png)
+
+### Step 17: Buat skenario apabila ada kesalahan maka seluruh transaksi batal
+
+Sebelum implementasi konsep transaksi:
+(table pendanaan)
+![ID_Pendanaan-1-Jumlah_Dana-10000000](/Gambar/40.png)
+(table program_kerja)
+![ID_Program_Kerja-1-Dana_Pemasukan-5000000](/Gambar/41.png)
+
+```sql
+START TRANSACTION;
+
+UPDATE Pendanaan
+SET Jumlah_Dana = Jumlah_Dana - 300000000
+WHERE ID_Pendanaan = 1 AND Jumlah_Dana >= 300000000;
+
+UPDATE Program_Kerja
+SET Dana_Pemasukan = Dana_Pemasukan + 300000000
+WHERE ID_Program_Kerja = 1
+  AND EXISTS (
+      SELECT 1
+      FROM Pendanaan
+      WHERE ID_Pendanaan = 1 AND Jumlah_Dana >= 300000000
+  );
+```
+![Konsep-Transaksi-Gagal](/Gambar/42.png)
+
+Setelah implementasi konsep transaksi:
+(table pendanaan)
+![ID_Pendanaan-1-Jumlah_Dana-10000000](/Gambar/43.png)
+(table program_kerja)
+![ID_Program_Kerja-1-Dana_Pemasukan-5000000](/Gambar/44.png)
