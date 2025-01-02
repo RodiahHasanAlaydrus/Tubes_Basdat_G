@@ -18,5 +18,5 @@ CREATE TABLE Anggota(
 	Nomer_Telepon BIGINT
 );
 ```
-![Create-Table-Anggota](1.png)
-![Show-Table-Anggota](1.png)
+![Create-Table-Anggota](2.png)
+![Show-Table-Anggota](3.png)
