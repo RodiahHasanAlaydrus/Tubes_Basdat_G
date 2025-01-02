@@ -6,3 +6,17 @@ TUGAS AKHIR BASIS DATA (G)
 CREATE DATABASE db_Bidang1Imatika
 ```
 ![Create-Database](1.png)
+
+### Step 1: Membuat table Anggota (`Anggota`)
+```sql
+CREATE TABLE Anggota(
+	ID_Anggota INT PRIMARY KEY AUTO_INCREMENT,
+	NPM BIGINT,
+	Nama VARCHAR(225),
+	Tanggal_Lahir Date,
+	Email VARCHAR(225),
+	Nomer_Telepon BIGINT
+);
+```
+![Create-Table-Anggota](1.png)
+![Show-Table-Anggota](1.png)
