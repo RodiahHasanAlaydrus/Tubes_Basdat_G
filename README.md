@@ -118,3 +118,99 @@ INSERT INTO divisi (ID_Divisi, nama_divisi, ketua_divisi) VALUES
 ![Insert-Table-divisi](/Gambar/10.png)
 ![Show-Insert-Table-divisi](/Gambar/11.png)
 
+### Step 6: Membuat Table Ketua_Pelaksana (`Ketua_Pelaksana`) 
+```sql
+CREATE TABLE Ketua_Pelaksana (
+    ID_Ketua_Pelaksana INT PRIMARY KEY AUTO_INCREMENT,
+    NPM BIGINT,
+    Nama VARCHAR(225),
+    Nomer_Telepon BIGINT
+);
+```
+![Create-Table-Ketua_Pelaksana](/Gambar/12.png)
+![Show-Table-Ketua_Pelaksana](/Gambar/13.png)
+
+### Step 7: Memasukan data ke dalam Table Ketua_Pelaksana 
+```sql
+INSERT INTO Ketua_Pelaksana (ID_Ketua_Pelaksana, NPM, Nama, Nomer_Telepon) VALUES
+('','4523210072','Sabrina Hanifa Lestari1234567800'),
+('','4523210128','Rizky Nuril Ikhsan','081234567801'),
+('','4522210002','Emyely Nemy Agustine','081234567802'),
+('','4523210127','Siti Nurhaliza Fahmi','081234567803'),
+('','4522210003','Haryo Bintang Alfareza','081234567804'),
+('','4523210113','Daffa Muhammad Pratama','081234567805'),
+('','4522210004','Rizka Adelia Wijaya','081234567806'),
+('','4523210098','Aulia Rahayu Kartika','081234567807'),
+('','4522210005','Adi Nugroho Saputra','081234567808'),
+('','4523210077','Farah Indira Putri','081234567809'),
+('','4522210006','Naufal Yudha Setiawan','081234567810'),
+('','4523210069','Nadya Maulida Ayu','081234567811'),
+('','4522210007','Bayu Alif Ramadhan','081234567812'),
+('','4523210130','Andini Cahya Permata','081234567813'),
+('','4522210008','Bimo Arya Saputra','081234567814'),
+('','4523210126','Zahra Anindita Ramadhani','081234567815'),
+('','4522210009','Fikri Ahmad Ramzi','081234567816'),
+('','4523210049','Putri Maharani Dewi','081234567817'),
+('','4522210010','Rendi Maulana Setyo','081234567818'),
+('','4523210072','Sabrina Hanifa Lestari','081234567819');
+```
+![Insert-Table-Ketua_Pelaksana](/Gambar/14.png)
+![Show-Insert-Ketua_Pelaksana](/Gambar/15.png)
+
+### Step 8: Membuat Table Peserta (`Peserta`) 
+```sql
+CREATE TABLE Peserta (
+    ID_Peserta INT PRIMARY KEY AUTO_INCREMENT,
+    Nama VARCHAR(225),
+    NPM BIGINT
+);
+```
+![Create-Table-Peserta](/Gambar/16.png)
+![Show-Table-Peserta](/Gambar/17.png)
+
+### Step 9: Memasukan data ke dalam Table Peserta
+```sql
+INSERT INTO Peserta (Nama, NPM) VALUES
+('Ahmad Fauzan', 4522210001),
+('Bagas Pratama', 4522210002),
+('Citra Dewi', 4522210003),
+('Dian Purnama', 4522210004),
+('Eka Sari', 4522210005),
+('Fajar Nugroho', 4522210006),
+('Gita Ayu', 4522210007),
+('Hendra Saputra', 4522210008),
+('Indah Lestari', 4522210009),
+('Joko Santoso', 4522210010),
+('Kiki Amalia', 4523210011),
+('Lina Permata', 4523210012),
+('Mira Wulandari', 4523210013),
+('Novi Rahmawati', 4523210014),
+('Oka Putra', 4523210015),
+('Panca Wirawan', 4523210016),
+('Qory Maulida', 4523210017),
+('Raka Pratama', 4523210018),
+('Sari Amelia', 4523210019),
+('Tio Wahyudi', 4523210020),
+('Umi Salamah', 4524210021),
+('Vina Anggraini', 4524210022),
+('Wahyu Saputra', 4524210023),
+('Xenia Puspita', 4524210024),
+('Yoga Pratama', 4524210025),
+('Zahra Aulia', 4524210026),
+('Ardiansyah', 4524210027),
+('Bunga Sari', 4524210028),
+('Cahyo Putra', 4524210029),
+('Dewi Kumalasari', 4524210030),
+('Erwin Syahputra', 4524210031),
+('Fani Oktaviani', 4524210032),
+('Gilang Mahardika', 4524210033),
+('Hafiz Ramadan', 4524210034),
+('Ika Susanti', 4524210035);
+```
+![Insert-Table-Peserta](/Gambar/18.png)
+![Insert-Table-Peserta](/Gambar/19.png)
+![Show-Insert-Peserta](/Gambar/20.png)
+![Show-Insert-Peserta](/Gambar/21.png)
+![Show-Insert-Peserta](/Gambar/22.png)
+
+
