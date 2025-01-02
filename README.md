@@ -133,7 +133,7 @@ CREATE TABLE Ketua_Pelaksana (
 ### Step 7: Memasukan data ke dalam Table Ketua_Pelaksana 
 ```sql
 INSERT INTO Ketua_Pelaksana (ID_Ketua_Pelaksana, NPM, Nama, Nomer_Telepon) VALUES
-('','4523210072','Sabrina Hanifa Lestari1234567800'),
+('','4523210072','Sabrina Hanifa Lestari','081234567800'),
 ('','4523210128','Rizky Nuril Ikhsan','081234567801'),
 ('','4522210002','Emyely Nemy Agustine','081234567802'),
 ('','4523210127','Siti Nurhaliza Fahmi','081234567803'),
