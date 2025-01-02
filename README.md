@@ -75,5 +75,7 @@ INSERT INTO Anggota (ID_Anggota, NPM, Nama, Tanggal_Lahir, Email, Nomer_Telepon)
 ('','4522210025','Dandi Setiawan','2001-05-06','dandi.setiawan@email.com','081234567918'),
 ('','4523210092','Rahman Hakim','2000-03-27','rahman.hakim@email.com','081234567919');
 ```
-![Insert-Table-Anggota](/Gambar/1.png)
-![Show-Insert-Table-Anggota](/Gambar/1.png)
+![Insert-Table-Anggota](/Gambar/4.png)
+![Insert-Table-Anggota](/Gambar/5.png)
+![Show-Insert-Table-Anggota](/Gambar/6.png)
+![Show-Insert-Table-Anggota](/Gambar/7.png)
